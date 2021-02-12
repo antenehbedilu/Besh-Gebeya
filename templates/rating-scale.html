@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Rating Scale</title>
+{% endblock %}
+
+{% block body %}
+<h1>Rating Scale</h1>
+<br>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Status</th>
+        <th scope="col">Minimum</th>
+        <th scope="col">Maximum</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Under Performer</td>
+        <td>0</td>
+        <td>49</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Needs Development</td>
+        <td>50</td>
+        <td>69</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Full Performer</td>
+        <td>70</td>
+        <td>79</td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>Strong Performer</td>
+        <td>80</td>
+        <td>89</td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td>Exceptional Performer</td>
+        <td>90</td>
+        <td>100</td>
+      </tr>
+    </tbody>
+  </table>
+  {% endblock %}

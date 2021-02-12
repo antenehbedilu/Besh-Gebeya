@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Update Demographics</title>
+{% endblock %}
+
+{% block body %}
+<h1>Update an employee</h1>
+<br>
+
+{% for employee in employees %}
+{% set employee = employee.to_dict()%}
+<form action='/update-demographic/{{employee["UUID"]}}' method='POST' class="row g-3 needs-validation" novalidate>
+    <div class="col-md-4">
+        <label for="fullName" class="form-label">Full name</label>
+        <input type="text" class="form-control" name="fullName" id="fullName" value='{{employee["fullName"]}}' required>
+    </div>
+
+    <div class="col-md-4">
+        <label class="form-label">Gender</label><br>
+        <div class="form-check form-check-inline my-2">
+            <input class="form-check-input" type="radio" name="gender" id="genderMale" value="Male" checked>
+            <label class="form-check-label" for="genderMale">Male</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="Female">
+            <label class="form-check-label" for="genderFemale">Female</label>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <label for="dateOfBirth" class="form-label">Date of birth</label>
+        <input class="form-control" type="date" name="dateOfBirth" id="dateOfBirth" value='{{employee["dateOfBirth"]}}'
+            required>
+    </div>
+
+    <div class="col-md-4">
+        <label for="emailAddress">Email address</label>
+        <input type="email" class="form-control" name="emailAddress" id="emailAddress" aria-describedby="emailHelp"
+            value='{{employee["emailAddress"]}}' required>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+    <div class="col-md-4">
+        <label for="phoneNo" class="form-label">Phone no.</label>
+        <input type="tel" class="form-control" name="phoneNo" id="phoneNo"
+            pattern="[+]{1}[1-5]{3}-[0-9]{3}-[0-9]{3}-[0-9]{3}" value='{{employee["phoneNo"]}}' required>
+    </div>
+
+    <div class="col-md-4">
+        <label for="employmentDate" class="form-label">Employment Date</label>
+        <input class="form-control" type="date" name="employmentDate" id="employmentDate" value='{{employee["employmentDate"]}}' required>
+    </div>
+
+
+    <div class="col-md-4">
+        <label for="department" class="form-label">Department</label>
+        <select class="form-select " name="department" id="department" required>
+            <option selected disabled value="">Choose...</option>
+            <option value="Janitor">Janitor</option>
+            <option value="Security">Security</option>
+            <option value="Data Encoder">Data Encoder</option>
+            <option value="Senior ICT Manager">Senior ICT Manager</option>
+            <option value="Senior Accountant I">Senior Accountant I</option>
+            <option value="Logistics Manager">Logistics Manager</option>
+            <option value="Project Manager">Project Manager</option>
+            <option value="Internal Auditor">Internal Auditor</option>
+            <option value="Legal Officer">Legal Officer</option>
+        </select>
+    </div>
+
+    <div class="col-md-4">
+        <label for="position" class="form-label">Position</label>
+        <select class="form-select " name="position" id="position" required>
+            <option selected disabled value="">Choose...</option>
+            <option value="Janitor">Janitor</option>
+            <option value="Security">Security</option>
+            <option value="Data Encoder">Data Encoder</option>
+            <option value="Senior ICT Manager">Senior ICT Manager</option>
+            <option value="Senior Accountant I">Senior Accountant I</option>
+            <option value="Logistics Manager">Logistics Manager</option>
+            <option value="Project Manager">Project Manager</option>
+            <option value="Internal Auditor">Internal Auditor</option>
+            <option value="Legal Officer">Legal Officer</option>
+        </select>
+    </div>
+
+    <div class="col-md-4">
+        <label for="grade" class="form-label">Grade</label>
+        <select class="form-select " name="grade" id="grade" required>
+            <option selected disabled value="">Choose...</option>
+            <option value=1>Grade 1</option>
+            <option value=2>Grade 2</option>
+            <option value=3>Grade 3</option>
+            <option value=4>Grade 4</option>
+            <option value=5>Grade 5</option>
+            <option value=6>Grade 6</option>
+        </select>
+    </div>
+
+    <div class="col-md-4">
+        <label for="lineManager" class="form-label">Line Manager</label>
+        <select class="form-select " name="lineManager" id="lineManager" required>
+            <option selected disabled value="">Choose...</option>
+            <option value="CEO">Chief Executive Officer (CEO)</option>
+            <option value="COO">Chief Operating Officer (COO)</option>
+            <option value="CHRO">Chief Human Resources Officer (CHRO)</option>
+            <option value="CFO">Chief Financial Officer (CFO)</option>
+        </select>
+    </div>
+
+
+    <hr class="my-4">
+
+    <div class="col-12">
+        <button class="btn btn-primary" type="submit">Update an employee</button>
+    </div>
+
+    <!--     <div class="d-grid gap-2 col-6 mx-auto">
+    <button class="btn btn-primary btn-lg" type="submit">Add an employee</button>
+</div> -->
+
+</form>
+{% endfor %}
+
+{% endblock %}

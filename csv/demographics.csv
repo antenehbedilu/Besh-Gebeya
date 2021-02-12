@@ -1,0 +1,227 @@
+UUID,fullName,gender,dateOfBirth,employmentDate,department,position,grade,lineManager
+1,Abdulhakim Ture,M,20-Oct-93,10/Dec/2018,Sales,EM,5,Branch Manager
+2,Abebeche Jara,F,4-Sep-74,9/Jan/2020,Modern Trade,cleaner,,Store Manager
+3,Abel Minale,M,21-Sep-95,17/Feb/2020,System & Support,ICT Support Officer,,
+4,Abenet Tamerat,M,20-Jun-68,24/Mar/2003,Sales,Sales & Van driver,4,Branch Manager
+5,Abraham Admasu,M,,20/Apr/2020,Construction,Store Head,,
+6,Abreham Legesse,M,,27/Mar/2009,Sales,Outlet Manager,8,Sales Account Manager 1
+7,Abreham W/Michael,M,21-Jan-89,14/Oct/2016,Sales,Direct Sales Supervisor,6,Sales Account Manager 1
+8,Abrehame merga,M,,1/Nov/2016,Sales,Direct Sales Assistant,5,Branch Manager
+9,Addis Berta,F,21-Jan-89,10/Aug/2019,Modern Trade,In- Store Sales Supervisor,6,Store Manager
+10,Agegnehu Alemu,M,5-Sep-96,20/Oct/1998,Sales,Area sales Manager,10,Sales Account Manager 1
+11,Alemeseged Kidane,M,,20/Apr/2020,Modern Trade,In- Store Sales supervisor,,
+12,Alemnesh H/Michael,F,5-Sep-96,10/Aug/2019,Modern Trade,Cashier,3,Store Manager
+13,Alemsehay Mamo,F,8-Jun-81,9/May/2015,Sales,Area sales Manager,8,Sales Account Manager 1
+14,Alemtshaye Girma,F,13-Jan-83,10/Nov/2012,Modern Trade,C&C Store Manager,6,Cash & Carry Senior Manager
+15,Amare Tilahun,M,2-Mar-60,1/Jun/2017,Sales,Guard,1,Branch Manager
+16,Amarech Gobezie,F,29-Oct-93,1/Oct/2017,Sales,cleaner,1,Branch Manager
+17,Anchinesh Mengistu,F,12-Dec-65,1/Jan/2002,Modern Trade,C&C Store Manager,7,Store Manager
+18,Asamenew Chane,M,8-Mar-90,1/Nov/2012,Sales,Area sales Manager,6,Sales Account Manager 1
+19,Asaye Yohannes,M,1-Feb-90,25/Jul/2019,HR,HR Generalist,9,Human Resource Executive Manager
+20,Aschalech Guluma,F,,16/Apr/2018,Sales,Cashier,4,Branch Manager
+21,Ashenafi Adinew,M,15-Sep-66,9/Aug/2018,Modern Trade,Van Driver,3,Store Manager
+22,Asrat Beshah,M,,1/Jun/2005,Sales,Store Keeper,5,Branch Manager
+23,Ayelgn Desalegn,M,26-Dec-82,10/Oct/2016,System & Support,MIS Manager,12,CEO
+24,Bamelaku Kefle,M,31-Aug-90,1/Dec/2015,System & Support,Accountant I,7,Finance manager
+25,Bantegizie Abatneh,M,24-May-95,13/Jan/2020,Export,Export Trade Purchaser,,Export Manager
+26,Bealu Molla Aragaw,M,6-Jan-88,22/Dec/2016,Sales,Direct Sales Supervisor,6,Sales Account Manager 1
+27,Bedatu Fikru Bame,F,18-Sep-90,9/Mar/2017,Sales,Cashier,4,Sales Account Manager 2
+28,Bekashgn Mekru,F,,9/Apr/2020,Modern Trade,In-Store Sales Assistant,,
+29,Belay Mandefro,M,29-Sep-87,17/Jan/2019,Sales,Direct Sales Supervisor,6,Sales Account Manager 1
+30,Belaye Bekele,F,1-Jul-59,1/Jun/2018,HR,Guard,1,General Service
+31,Berihun Asnake,M,13-Dec-77,24/Nov/2015,HR,Guard,2,General Service
+32,Betelhim Ewnetu,F,,13/Aug/2018,Sales,Sales Cashier II,4,Branch Manager
+33,Bethelhem Getachew,F,23-May-91,1/Aug/2019,Supply Chain,Market Intellegence Officer,6,Store Manager
+34,Bethlehem Tesfaye,F,28-Feb-96,4/May/2020,Marketing,Call Center Operator,4,
+35,Bethlehem Tsegaye,F,,30/Sep/2019,Modern Trade,Sales Supervisor-Last Mile Distribution,5,Store Manager
+36,Bewketu Kebede,M,,1/Dec/2017,System & Support,Internal Auditor,13,CEO
+37,Bezawit Sewnet,F,,22/Apr/2020,Modern Trade,In- Store Sales Assistant,,C&C Store Manager
+38,Bezuayehu Awolew,F,,1/Jun/2018,Sales,cleaner,1,Branch Manager
+39,Biniyam Shukie,M,4-Aug-88,9/Jul/2018,Sales,Area sales Manager,10,Sales Account Manager 1
+40,Birkt Lemma,F,,1/Nov/2015,Sales,Direct Sales Assistant,,Branch Manager
+41,Bisrat Tadesse,F,18-Jun-93,7/Sep/2015,Sales,Sales Cashier II,4,Branch Manager
+42,Bizunesh Bereded Gedlu,F,15-Nov-98,20/Dec/2017,Supply Chain,Sourcing Officer,2,C&C Store Manager
+43,Brook Negussie W/medhin,M,5-Sep-90,7/Jun/2016,Sales,Regional Sales Manager,13,Major Sales account Exec.
+44,Buzuye Gelaw,F,19-Jun-92,1/Feb/2019,Sales,Casher & Store Keeper,4,Branch Manager
+45,Daniel Tamiru,M,3-Feb-76,1/Aug/2009,System & Support,Senior Accountant I,9,Finance manager
+46,Debritu Demelash,F,28-Jun-95,3/Jan/2018,Sales,Store Keeper,4,Branch Manager
+47,Dereje Mulat,M,17-Jan-74,3/Jan/2012,Sales,Guard,1,Branch Manager
+48,Derje Lulie,M,11-Oct-86,1/Jun/2018,HR,Guard,1,General Service
+49,Ehetenesh Kassa,F,,6/Apr/2020,Modern Trade,Check Point Security,,
+50,Ejigayehu Adamu,F,,1/Aug/2019,HR,cleaner,1,General Service
+51,Eleab Getachew,M,3-Jun-86,14/Oct/2017,Sales,D/CEO-Constraction Materials sales,16,CEO
+52,Eleni Tesfaye,F,1984,1/Nov/2019,Sales,Direct Sales Assistant,,Branch Manager
+53,Elsabet Eticha,F,5-Mar-94,10/Aug/2019,Modern Trade,In-Store Sales Assistant,4,Store Manager
+54,Embet Admas,M,,6/Apr/2020,Modern Trade,Janitor,,C&C Store Manager
+55,Embet Hunde,F,25-Jan-98,10/Aug/2019,Modern Trade,In-Store Sales Assistant,2,Store Manager
+56,Embet Worku,F,1987,1/Jan/2019,System & Support,Senior Accountant I,9,Project Finance Manager
+57,Emebet Alemu,F,13-Oct-87,5/Jan/2012,Sales,Cashier,4,Branch Manager
+58,Endale Lemisa,M,17-Jun-97,10/Nov/2018,Sales,Guard,1,Branch Manager
+59,Ephrem Fekade,M,3-Mar-74,24/Oct/2017,Supply Chain,"Logistics, Inventory & Warehouse Manager",13,Supply Chain Executive
+60,Ermias Asefa,M,9-Feb-75,31/Dec/2013,Supply Chain,Van driver,3,"Logistics, Inventory and Warehouse Manager"
+61,Ermias W/Selassie  Tekle,M,26-Oct-76,14/Oct/2013,HR,"Senior Manager,Admin & Facility",13,CEO
+62,Ermias Yekoye,M,1-Sep-95,23/Jan/2020,Sales,,,Branch Manager
+63,Ersetu Gezahegn,M,1989,14/Oct/2016,Sales,Guard,1,Branch Manager
+64,Eshetu Ali Mohammed,M,11-Feb-85,7/Nov/2016,Marketing,Project and Affairs Head,11,Marketing and Business Development Exec.
+65,Ethiopia Gizaw,F,1970,10/Nov/2012,Sales,Sales Supervisor,4,Sales Account Manager 1
+66,Eyerusalem Gezahegn,F,7-Sep-94,4/May/2020,Modern Trade,Sales Cashier II,,C&C Store Manager
+67,Eyerusalem Kebede,F,3-May-85,11/Oct/2008,Sales,Direct Sales Assistant,5,Sales Account Manager 1
+68,Eyerusalem Mamush,F,7-Jul-96,22/Apr/2020,Modern Trade,Sales Cashier,,
+69,Eyob Tekle,M,20-Apr-77,3/Oct/2017,HR,Driver,5,GS
+70,Eyouel Girma,M,3-Dec-87,24/May/2015,Sales,Direct Sales Assistant,5,Sales Account Manager 1
+71,Eyrusalem Ambaw,F,28-Mar-91,14/Oct/2016,Sales,Casher & Store Keeper,4,Sales Account Manager 1
+72,Fantahun Anemut Temesgen,M,4-Jun-67,14/Jun/2008,HR,Guard,2,GS
+73,Fetiya Kassahun,F,1989,19/Sep/2019,Modern Trade,Van Sales,1,Sales Account Manager
+74,Fikrte Legesse,F,,11/Nov/2019,Sales,Store Keeper,4,Sales Account Manager 1
+75,Fitsum Negussie,M,,6/Sep/2017,CEO,Chief  Executive Officer,,
+76,Frehiwot Megersa,F,20-Feb-77,11/May/2020,Modern Trade,Janitor,,
+77,Gebeyehu Gebre,M,27-Sep-60,1/Jun/2018,HR,Guard,1,GS
+78,Gemechu Gemeda,M,28-Jun-93,10/Jul/2018,Sales,Direct Sales Assistant,4,Sales Account Manager 1
+79,Genet Fita,F,15-Oct-69,12/May/2020,HR,Janitor,,
+80,Getachew Merti,M,11-Aug-77,3/Jan/2018,Sales,Guard,1,Sales Account Manager 1
+81,Gibril Behilu Muzeyen,M,15-Apr-92,1/Dec/2016,System & Support,Acting CFO,15,MIS Manager
+82,Girma Tafese,M,1961,1/Jun/2018,HR,Guard,1,GS
+83,Goshu Siber,M,,15/Mar/2004,HR,Guard,2,GS
+84,Hana Tekola,F,19-Aug-92,14/May/2018,Modern Trade,In-Store Warehouse Clerk,4,Modern Sales Account
+85,Haregwayen Asefa,F,,6/Apr/2020,Modern Trade,Janitor,,C&C Store Manager
+86,Henok Tamirat,M,29-Apr-91,4/Jan/2018,Supply Chain,Van Driver,3,"Logistics, Inventory and Warehouse Manager"
+87,Hirut Adale,F,30-Jul-74,1/Nov/2019,HR,cleaner,2,GS
+88,Hiwot Teshome,F,19-Aug-90,21/Apr/2015,Sales,Casher,4,Sales Account Manager 1
+89,Imailaf Muluken Abate,M,21-Jan-85,22/Jan/2018,Supply Chain,Senior Category Manager,15,CEO
+90,Kaleab Ayele,M,17-Nov-98,1/Jan/2020,Modern Trade,In-Store Sales Assistant,,Modern Sales Account
+91,Kebed  Sebsibe Ashager,M,25-Mar-82,3/Apr/2016,HR,Guard,2,GS
+92,Kena Molla,F,11-Dec-93,20/Jan/2019,Sales,cleaner,1,Sales Account Manager 1
+93,Kenassa Awas,M,14-Dec-80,20/Feb/2003,Sales,Area sales Manager,8,Sales Account Manager 1
+94,Kibret hailu,M,27-Sep-81,1/Oct/2015,System & Support,Finance Manager,11,Finance manager
+95,Kidest Kebed,F,,13/Jan/2020,Sales,Store keeper,,Branch Manager
+96,Kidest Tesfaye,F,10-Sep-93,14/May/2018,Modern Trade,Main Cashier,4,Sales Account Manager 1
+97,Kiflu Tefera Tassew,M,1-Jan-54,8/Feb/2007,HR,Guard,2,GS
+98,Kirubel Lemma,M,5-Dec-98,10/Aug/2019,Modern Trade,In-Store Sales Assistant,2,Sales Account Manager
+99,Kiruble Atlaw,M,26-Sep-94,1/Jan/2020,Modern Trade,Direct Sales Assistant,,Modern Sales Account
+100,Kumneger Bekle,F,1997,4/Oct/2018,Sales,Store Keeper,4,Sales Account Manager 1
+101,Lewtfana  Amede,F,1983,14/Aug/2014,Sales,Direct Sales Assistant,4,Sales Account Manager 1
+102,Lidet Yilma,F,1-Jul-98,1/Sep/2019,Marketing,Pricing & Marketing Intelligence officer,4,Sales Account Manager
+103,Liya Weldie,F,21-Oct-91,10/Aug/2019,Modern Trade,In-Store Sales Suupervisor,4,Sales Account Manager
+104,Lulit Kebed,F,8-Apr-96,10/Aug/2019,Modern Trade,In-Store Sales Assistant,4,Sales Account Manager
+105,Mahlet G/Sellasie,F,19-Mar-91,8/Apr/2019,System & Support,Accountant I,6,Finance manager
+106,Masresha Tesfaye Ayele,M,29-Jan-61,19/Mar/1997,HR,Guard,2,GS
+107,Matebie Emerie,M,17-Sep-85,1/Nov/2019,Export,Export Manager,,CEO
+108,Meaza Birhanu Molla,F,4-May-95,29/May/2017,Supply Chain,Category Manager PH care,8,Supply Chain Executive Manager
+109,Medhanit Demess,F,31-Aug-97,6/Sep/2019,Supply Chain,Category  Officer,4,Supply Chain Executive Manager
+110,Medhanit Hailu,F,7-Jun-66,20/Mar/2018,HR,Chief HR,15,
+111,Mehari Mekonnen,M,,1/Oct/2019,Corporate,Investment and Finance Advisor,,Managing Director
+112,Mekedes Mesfin,F,19-Jun-98,6/Sep/2019,Modern Trade,cleaner,1,Sales Account Manager
+113,Mekonen Belayehun,M,1-Sep-96,22/Apr/2020,Modern Trade,Data clerk,,C&C Store Manager
+114,Mekonen Ketema,M,,10/Dec/2012,Supply Chain,Van Driver,3,"Logistics, Inventory and Warehouse Manager"
+115,Mengistu Sibhatu Senita,M,12-May-62,9/Feb/1996,System & Support,Finance Projects Manager,13,CFO
+116,Menwuyelet kumie,M,12-Sep-87,20/Jan/2017,Sales,Driver,3,Sales Account Manager 1
+117,Merehawit Desta,F,18-5-95,6/Sep/2019,Modern Trade,cleaner,1,Sales Account Manager
+118,Merkeb H/Meskel,F,17-Oct-83,1/Apr/2013,Modern Trade,Sales Cashier II,4,Sales Account Manager
+119,Meseret Getu,F,15-Mar-98,27/Jan/2020,System & Support,Junior Accountant,6,Finance manager
+120,Messay Tadesse,M,4-Jun-77,4/Feb/2017,System & Support,Procurement Lead,10,Finance manager
+121,Metasebia Yeneneh,F,31-Mar-94,23/Apr/2020,Construction,Sales and Distribution Supervisor,,
+122,Michael Hizkias,M,22-Aug-96,4/May/2020,Marketing,Data  Encoder,,
+123,Michael Terfe,M,12-Sep-94,1/Apr/2020,Modern Trade,In-Store Sales Assistant,,
+124,Milkyas Girma,M,9-Feb-96,10/Aug/2019,System & Support,Junior Accountant,4,Sales Account Manager
+125,Nardos Alemayehu Senkneh,F,19-Aug-96,7/Jul/2017,CEO,Executive Assistant,9,CEO
+126,Nejib Nimaga,M,12-Jun-88,1/Jan/2020,Modern Trade,In-Store Sales Assistant,,Modern Sales Account
+127,Netsanet Admasu,F,19-Jul-86,4/Sep/2016,Sales,cleaner,1,Branch Manager
+128,Netsanet Nigatu,F,21-May-87,16/Aug/2010,System & Support,General Account Head,11,Finance manager
+129,Nuhamin Tewoldebrhan,F,14-May-93,22/Apr/2020,Modern Trade,In-Store Sales Assistant,4,C&C Store Manager
+130,Nunu Diriba,F,13-Jan-93,19/Sep/2019,Modern Trade,Guard,1,Sales Account Manager
+131,Rabya Zewdu,F,,1/Dec/2014,Sales,Direct Sales Assistant,5,Sales Account Manager 1
+132,Rediet Senay,F,18-Feb-92,1/Feb/2014,Sales,Direct Sales Supervisor,8,Sales Account Manager 1
+133,Ruhama Mitiku,F,8-Feb-97,22/Apr/2020,Construction,Cashier Accountant,5,
+134,Salem Yosef,F,20-Nov-93,8/Jan/2020,Corporate,Secretary,,
+135,Sani Kemil,M,20-Sep-84,1/Aug/2015,Sales,Direct Sales  Assistant,5,Sales Account Manager 1
+136,Seada Ebrahim,F,21-Dec-00,6/Sep/2019,Modern Trade,cleaner,,Sales Account Manager
+137,Seifu Birega,M,22-Aug-77,1/Jan/2019,System & Support,ICT Manager,13,CFO
+138,Selam Girmay,F,1-Jan-92,22/Apr/2020,Modern Trade,In-Store Sales Assistant,,C&C Store Manager
+139,Selamawite Alemayehu Anota,F,26-Dec-96,21/Oct/2019,HR,Graduate Trainee,,Human Resource Executive Manager
+140,Selamawite Alemayehu Mekonen,F,19-Jun-93,22/Apr/2020,System & Support,Cashier,,
+141,Selamawite Hailu,F,8-Apr-72,30/Jun/1996,System & Support,Senior Cashier,5,Finance manager
+142,Selamawite Yehulashet,F,13-Dec-63,19/Mar/1987,System & Support,Senior Accountant I,8,Finance manager
+143,Selamawite Zemichael Teklu,F,1-Sep-91,20/Mar/2017,System & Support,Senior Accountant II,10,Finance manager
+144,Selamu Deliso,M,14-Apr-72,10/Oct/2018,Sales,Guard,1,Sales Account Manager 1
+145,Semachew Tesfaye,M,24-Feb-56,1/Jan/1999,Sales,Guard,2,Sales Account Manager 1
+146,Sentayehu Akalu,F,22-Dec-87,1/Apr/2019,System & Support,Accountant II,7,Finance manager
+147,Serkadiss Tsegaye,F,27-Jan-93,1/Jul/2019,Modern Trade,Key Account  Sales,,Sales Account Manager
+148,Setota Kolcha,F,25-Aug-93,13/May/2016,Sales,Sales Cashier,3,Sales Account Manager 1
+149,Sewenet Abeje,M,,1/May/2020,Construction,Regional Sales Manager,,
+150,Shewa Sifir,M,20-Oct-69,1/Sep/2010,Supply Chain,cleaner,1,"Logistics, Inventory and Warehouse Manager"
+151,Shewadagne Tadesse,M,25-Aug-73,1/Aug/2006,Sales,Central Warehouse Clerk II,5,Sales Account Manager
+152,Shishig Fasil,F,20-Aug-98,6/Sep/2019,System & Support,Trainee for sales and Operation,4,MIS Manager
+153,Sina Ayana,F,26-Jan-93,21/Oct/2015,Modern Trade,In-Store Warehouse Clerk II,5,"Logistics, Inventory and Warehouse Manager"
+154,Sisay Senbit,M,18-Sep-92,14/Jun/2018,Supply Chain,Category Officer,7,Finance manager
+155,Sisay W/Amanuel,M,13-Jun-86,22/Apr/2020,Modern Trade,In-Store Sales Assistant,,C&C Store Manager
+156,Solomon Ababu,M,1-May-87,18/Mar/2019,Sales,Driver,3,Sales Account Manager 1
+157,Solomon Siboro,M,18-Oct-85,7/Sep/2015,Modern Trade,Cash & Carry Branch,6,Sales Account Manager 1
+158,Sosena G/Medhin Demessie,F,3-Jun-74,1/Dec/2015,HR,HR Admin Assistant,8,Human Resource Executive Manager
+159,Tadegegn Worku Mamo,M,26-Dec-52,1/May/1997,HR,Guard,2,GS
+160,Tamene G/Egaiabher,M,25-Feb-76,10/May/2019,Modern Trade,Van Driver,3,Sales Account Manager
+161,Tefera Tareke,M,21-Dec-69,7/Dec/1994,Sales,Direct Sales Supervisor,6,Sales Account Manager 1
+162,Teka Bati Webe,M,14-Jul-69,1/Nov/2013,Supply Chain,Acting Store Manager,9,"Logistics, Inventory and Warehouse Manager"
+163,Tekle Mengesha,M,27-Oct-90,1/Jun/2018,HR,Guard,1,GS
+164,Temesegen Getahune,M,,1/Mar/2020,System & Support,Archive Management Senior Expert,,
+165,Temima Mohamed,F,25-Sep-90,1/Feb/2020,Sales,Janitor,,
+166,Terefe Kebed,M,9-Dec-59,1/Jun/2018,HR,Guard,1,GS
+167,Tesema Kudema,M,26-Jun-63,27/May/1997,HR,Guard,1,GS
+168,Tesema Reta  Asefaw,M,28-Sep-73,1/Apr/2008,Sales,Guard,1,Sales Account Manager 1
+169,Tewodros Yisheberu,M,26-Jun-77,1/Oct/2018,System & Support,Record Management Specialist,9,Project Finance Manager
+170,Tilahun Tamirat Bekel,M,7-Aug-91,13/Feb/2017,Supply Chain,Category Manager,11,Supply Chain Executive Manager
+171,Tofik Siraj,M,19-Sep-79,3/Feb/2015,Sales,Direct Sales Assistant,5,Sales Account Manager 1
+172,Tsedenya Alemu,F,13-Jun-92,15/Jan/2020,CEO,Legal Officer,10,CEO
+173,Tsehaye Belete,F,14-Feb-92,1/Jan/2020,Modern Trade,In-Store Sales Assistant,,C&C Store Manager
+174,Walid Omer,M,17-Feb-87,29/Jul/2019,Sales,Regional Sales Manager Wholesale,14,Major Sales account Exec.
+175,Wegayehu Birhanu,M,15-Oct-31,1/Jun/2017,Sales,Guard,1,Sales Account Manager 1
+176,Wesenseged Sima,M,4-Jun-83,1/Aug/2018,Sales,Area Sales Manager,10,Sales Account Manager 1
+177,Worku Mekonen,M,18-Oct-55,1/Jan/1999,Sales,Guard,2,Sales Account Manager 1
+178,Wossen Demas,F,25-Sep-84,22/Oct/2012,Sales,Direct Sales Assistant,4,Sales Account Manager 1
+179,Yabsira Getachew,F,11-Sep-91,28/Sep/2017,Corporate,Legal Advisor,12,
+180,Yamlaknesh Tomas,F,10-Aug-92,4/Dec/2017,Sales,Sales Information Manager,7,Major Sales account Exec.
+181,Yanet Gizachew,F,11-Apr-94,1/Sep/2018,Supply Chain,Key Account  Manager,7,Supply Chain Executive Manager
+182,Yared Adane,M,9-Aug-96,18/Jan/2020,System & Support,IT Support Officer,6,ICT Manager
+183,Yared Cheru,M,24-Oct-89,10/Apr/2018,Supply Chain,"Logistics, Warehouse & Inventory  Coordinator",11,"Logistics, Inventory and Warehouse Manager"
+184,Yawekal Melaku Tadesse,M,30-Dec-77,28/Oct/2013,Supply Chain,Central Warehouse Clerk I,6,"Logistics, Inventory and Warehouse Manager"
+185,Yedenekachew Gelaye,M,20-O-70,9/Apr/2002,Sales,Area sales Manager,10,Construction Account Exec.
+186,Yeshareg Ababu,F,12-Jul-79,1/May/2018,HR,cleaner,3,GS
+187,Yeshiworke Dagen Kebed,F,8-Sep-88,26/Mar/2015,HR,Reception,4,GS
+188,Yodit Mesfine,F,4-Jan-85,9/Jan/2020,HR,cleaner,,Modern Sales Account
+189,Yoseph Aregaye,M,19-Jun-72,1/May/2018,HR,Guard,4,GS
+190,Zebiba Seid,F,1-Mar-90,4/Nov/2014,Sales,Direct Sales Assistant,4,Sales Account Manager 1
+191,Zegenet Abate,M,7-Oct-98,1/Jan/2020,Modern Trade,In- Store Sales Assistant,,Modern Sales Account
+192,Zelekash Shewalem,F,15-Jul-73,10/Jul/1999,Sales,C&C Store Manager,8,Sales Account Manager 1
+193,Sheta Terefe,F,,1/Feb/2020,Sales,Janitor,,
+194,Solomon Kassa,M,22-Nov-01,1/May/2020,Supply Chain,Quality controller,,"Logistics, Inventory and Warehouse Manager"
+195,Aschalew Zegeye,M,20-Mar-95,1/Jun/2020,Construction,Regional Sales Manager,,
+196,Yared Seyoum,M,19-Apr-85,1/Jun/2020,CEO,Chief Operation Officer,15,CEO
+197,Fasika Chane,M,15-Apr-87,22/Jun/2020,Sales,Direct Sales Supervisor,,
+198,Rehana Yusuf,F,,1/Jul/2020,Sales,Senior Regional Sales Manager-Constraction,,D/CEO -Cement
+199,Amare Lakiyallew,M,14-Jul-94,1/Jul/2020,Sales,In Store Warehouse Clerk,,
+200,Andualem Beyene,M,,1/Jul/2020,Sales,In Store Sales Assistant,,
+201,Birtukan Denberu,F,,1/Jul/2020,Sales,Sales Cashier,,
+202,Helen Asmare,F,,1/Jul/2020,Sales,In Store Sales Assistant,,
+203,Mahilet Sisay,F,3-Oct-97,1/Jul/2020,Sales,In Store Sales Assistant,,
+204,Emnet Mulugeta,F,,6/Jul/2020,Sales,Marketing Manager,,
+205,Tadla Kifle,F,,1/Jul/2020,System & Support,Sales Cashier II,,
+206,Hana Geremew,F,,16/Jul/2020,Sales,Retail Regional Sales Manager,,
+207,Aynalem Melese,F,12-Jun-91,22/Jul/2020,Supply Chain,Category Manager,11,
+208,Roza lake,F,,1/Jul/2020,Sales,In Store Sales Assistant,4,
+209,Natnael Merga,M,,27/Jul/2020,HR,Driver,3,
+210,Marcilas Getaneh,M,5-Apr-99,20/Jul/2020,System & Support,Sales Cahier,,
+211,Merem  Muhabaw,F,,6/Aug/2020,FMCG,Sales Cahier,,
+212,Meskerem Habte,F,7-Oct-77,6/Aug./2020,HR,Janitor,,
+213,Wakweya Assefa,M,5-Sep-93,7/Aug/2020,HR,Driver,5,
+214,Eskiyas Shemeles,M,18-May-97,12/Aug/2020,HR,Moter Biyker & Liesor Officer,4,
+215,Amen Sewnet,M,18-May-87,17/Aug/2020,FMCG,Senior Regional Sales Manager,14,
+216,Rebka Dereje,F,6-May-93,24/Aug/2020,HR,Human Resource Officer,9,
+217,Dagmawi Asfaw,M,,25/Aug/2020,HR,HR Operation Manager,,
+218,Serkalem Ababu,F,,27/Aug/2020,HR,Janitor,1,
+219,Shitru Kifle,M,,20/Aug/2020,Modern Trade,In-store Warehouse Clerk,4,
+220,Bethel Buzuayehu,F,,1/Aug/2020,Corporate,Corporate Human Resource Communications Coordinator,,
+221,Yonan Getachew,M,17-May-92,1/Sep/2020,FMCG,E-Commerce Project Manager,14,
+222,Samrawit Tesfaye,F,,22/Sep/2020,Finance,Junior Accountant,,
+223,Hanamaryam Damite,F,,20/Sep/2020,FMCG,Sales Cashier,,
+224,Ayimaw Getachew,M,,1/Oct/2020,FMCG,Check Point Security,4,
+225,Mastewal Alemu Mulu,F,,1/Oct/2020,FMCG,Check Point Security,4,
+226,Fitsum Tamerat,M,,7/Oct/2020,Finance,System Adiministrator,12,

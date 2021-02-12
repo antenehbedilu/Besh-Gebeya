@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Smart Goals</title>
+{% endblock %}
+
+{% block body %}
+<h1>View Smart Goals</h1>
+<br>
+
+<div class="container mb-3 mt-3">
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="th-sm">#
+                </th>
+                <th class="th-sm">Department
+                </th>
+                <th class="th-sm">Business Objectives
+                </th>
+                <th class="th-sm">Distribution Coverage
+                </th>
+                <th class="th-sm">People Management
+                </th>
+                <th class="th-sm">Customer Distributor Management
+                </th>
+                <th class="th-sm">Financial Resources Management
+                </th>
+                <th class="th-sm">Action
+                </th>
+            </tr>
+        </thead>
+        {% for department in departments %}
+        {% set department = department.to_dict() %}
+        <tbody>
+            <tr>
+                <th>{{ loop.index }}</th>
+                <td>{{ department['departmentOf'] }}</td>
+                <td>{{ department['businessObjectives'] }}</td>
+                <td>{{ department['distributionCoverage'] }}</td>
+                <td>{{ department['peopleManagement'] }}</td>
+                <td>{{ department['customerDistributorManagement'] }}</td>
+                <td>{{ department['financialResourcesManagement'] }}</td>
+                <td>
+                    <a class="btn btn-outline-success my-2 my-sm-0"
+                        href='/update_smart_goals/{{ department["departmentOf"] }}'>Update</a>
+                    <a class="btn btn-outline-danger my-2 my-sm-0"
+                        href='/delete_smart_goals/{{ department["departmentOf"] }}'>Delete</a>
+                </td>
+            </tr>
+        </tbody>
+        {% endfor %}
+        <tfoot>
+            <tr>
+                <th class="th-sm">#
+                </th>
+                <th class="th-sm">Department
+                </th>
+                <th class="th-sm">Business Objectives
+                </th>
+                <th class="th-sm">Distribution Coverage
+                </th>
+                <th class="th-sm">People Management
+                </th>
+                <th class="th-sm">Customer Distributor Management
+                </th>
+                <th class="th-sm">Financial Resources Management
+                </th>
+                <th class="th-sm">Action
+                </th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+{% endblock %}
