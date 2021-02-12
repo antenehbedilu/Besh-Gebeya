@@ -115,7 +115,7 @@ def add_smart_goal():
             u'peopleManagement': peopleManagement,
             u'customerDistributorManagement': customerDistributorManagement,
             u'financialResourcesManagement': financialResourcesManagement})
-            return redirect('/smart_goals')
+            return redirect('/view-smart-goals')
         except Exception as e:
             return f'An Error Occured: {e}'
     return render_template('add-smart-goal.html')
