@@ -178,6 +178,15 @@ def view_talent_assessments():
     except Exception as e:
         return f'An Error Occured: {e}'
 
+@app.route('/view-employee-of-the-year', methods=['POST', 'GET'])
+def view_employee_of_the_year():
+	try:
+	    employees = db.collection('ASSESSMENT')
+	    employees = employees.where(u'scores', u'==', 100).stream()
+	    return render_template('view-employee-of-the-year.html', employees=employees)
+	except Exception as e:
+	    return f'An Error Occured: {e}'
+
 
 
 
