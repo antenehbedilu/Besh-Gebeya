@@ -16,6 +16,21 @@ $ touch index.html base.html add-demographic.html view-demographics.html update-
 $ cd ..
 ```
 
+### Deployment 
+
+```python
+$ pip3 install -U gunicorn
+$ echo 'web: gunicorn app:app' >> Procfile
+$ pip3 freeze > requirements.txt && pip3 freeze
+$ heroku login -i
+$ heroku create beshgebeya-pm
+$ git remote -v
+$ git push heroku master
+$ heroku logs --app beshgebeya-pm
+$ heroku logs -t
+$ heroku open
+```
+
 ### Department
 
 ```
