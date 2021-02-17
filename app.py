@@ -94,6 +94,10 @@ def delete_demographic(UUID):
     except Exception as e:
         return f'An Error Occured: {e}'
 
+@app.route('/evaluation-criteria')
+def evaluation_criteria():
+    return render_template('evaluation-criteria.html')
+
 @app.route('/rating-scale')
 def rating_scale():
     return render_template('rating-scale.html')
