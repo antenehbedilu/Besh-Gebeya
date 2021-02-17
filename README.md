@@ -210,3 +210,14 @@ Chef Planning & Montering Manager
 Chef Operations Officer
 Chef Executive Officer 
 ```
+
+### Average of Evaluation Form
+
+| Status     | Minimum | Maximum |
+|------------|---------|---------|
+| Excellent  | 4.45    | 5.00    |
+| Very Good  | 3.45    | 4.44    |
+| Good       | 2.45    | 3.44    |
+| Least      | 1.45    | 2.44    |
+| Very Least | 1.00    | 1.44    |
+
