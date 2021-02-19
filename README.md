@@ -223,7 +223,6 @@ Chef Executive Officer
 
 ### Evaluation Criteria
 
-```
 | Criteria                   | Description                                                     |
 |----------------------------|-----------------------------------------------------------------|
 | Job Knowledge              | Knows their job and fulfills their JD to the fullest potential. |
@@ -236,4 +235,3 @@ Chef Executive Officer
 | Confidentiality            | Does not discuss internal events with coworkers.                |
 | Accepts criticism          | Has the ability to learn from suggestions and change behavior.  |
 | Appearance of Work Area    | Keeps work area neat and orderly.                               |
-```
