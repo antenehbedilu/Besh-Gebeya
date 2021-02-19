@@ -1,98 +1,21 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block head %}
+<title>Best Performer</title>
+{% endblock %} {% block body %}
+<h1>Best Performer</h1>
+<br />
 
-{% block head %}
-<title>Demographics</title>
-{% endblock %}
-
-{% block body %}
-<h1>Employee of the year</h1>
-<br>
-
-<form class="form-inline" action='/view-employee-of-the-year' method='POST'>
-</form>
-
-<div class="container mb-3 mt-3">
-    <table class="table">
-        <thead>
-            <tr>
-                <th class="th-sm">#
-                </th>
-                <th class="th-sm">UUID
-                </th>
-                <th class="th-sm">Full name
-                </th>
-                <th class="th-sm">Gender
-                </th>
-                <th class="th-sm">Date of Birth
-                </th>
-<!--                  <th class="th-sm">Email
-                </th>
-                <th class="th-sm">Phone no.
-                </th> -->
-                <th class="th-sm">Employment Date
-                </th>
-                <th class="th-sm">Department
-                </th>
-                <th class="th-sm">Position
-                </th>
-                <th class="th-sm">Grade
-                </th>
-                <th class="th-sm">Line Manager
-                </th>
-                <th class="th-sm">Action
-                </th>
-            </tr>
-        </thead>
-        {% for employee in employees %}
-        {% set employee = employee.to_dict() %}
-        <tbody>
-            <tr>
-                <th>{{ loop.index }}</th>
-                <td>{{ employee['UUID'] }}</td>
-                <td>{{ employee['fullName'] }}</td>
-                <td>{{ employee['gender'] }}</td>
-                <td>{{ employee['dateOfBirth'] }}</td>
-<!--                 <td>{{ employee['emailAddress'] }}</td>
-                <td>{{ employee['phoneNo'] }}</td> -->
-                <td>{{ employee['employmentDate'] }}</td>
-                <td>{{ employee['department'] }}</td>
-                <td>{{ employee['position'] }}</td>
-                <td>{{ employee['grade'] }}</td>
-                <td>{{ employee['lineManager'] }}</td>
-            </tr>
-        </tbody>
-        {% endfor %}
-        <tfoot>
-            <tr>
-                <th class="th-sm">#
-                </th>
-                <th class="th-sm">UUID
-                </th>
-                <th class="th-sm">Full name
-                </th>
-                <th class="th-sm">Gender
-                </th>
-                <th class="th-sm">Date of Birth
-                </th>
-<!--                 <th class="th-sm">Email
-                </th>
-                <th class="th-sm">Phone no.
-                </th> -->
-                <th class="th-sm">Employment Date
-                </th>
-                <th class="th-sm">Department
-                </th>
-                <th class="th-sm">Position
-                </th>
-                <th class="th-sm">Grade
-                </th>
-                <th class="th-sm">Line Manager
-                </th>
-                <th class="th-sm">Action
-                </th>
-            </tr>
-        </tfoot>
-    </table>
+{% for employee in employees %} {% set employee = employee.to_dict() %}
+<div class="d-flex justify-content-center">
+  <div class="card border-primary mb-3" style="max-width: 18rem">
+    <div class="card-header">
+      Best Performer of {{ employee['reviewDate'][0:4] }}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Employee UUID {{ employee['UUID'] }}</h5>
+      <p class="card-text">Review Year {{ employee['reviewDate'] }}</p>
+    </div>
+  </div>
 </div>
+<br />
 
-{% endblock %}
+{% endfor %} {% endblock %}

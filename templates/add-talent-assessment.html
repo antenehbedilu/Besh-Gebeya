@@ -1,68 +1,210 @@
-{% extends 'base.html' %}
-
-{% block head %}
+{% extends 'base.html' %} {% block head %}
 <title>Assessment</title>
-{% endblock %}
-
-{% block body %}
+{% endblock %} {% block body %}
 <h1>Add Assessment</h1>
-<br>
+<br />
 
-<form action='/add-talent-assessment' method='POST' class="row g-3">
+<form action="/add-talent-assessment" method="POST" class="row g-3">
+  <div class="col-md-4">
+    <label for="reviewDate" class="form-label">UUID</label>
+    <input class="form-control" type="text" name="UUID" id="UUID" required />
+  </div>
 
-    <div class="col-md-4">
-        <label for="reviewDate" class="form-label">UUID</label>
-        <input class="form-control" type="text" name="UUID" id="UUID" required>
-    </div>
+  <div class="col-md-4">
+    <label for="reviewDate" class="form-label">Review date</label>
+    <input
+      class="form-control"
+      type="month"
+      name="reviewDate"
+      id="reviewDate"
+      value="2021-01"
+      required
+    />
+  </div>
 
-    <div class="col-md-4">
-        <label for="reviewDate" class="form-label">Review date</label>
-        <input class="form-control" type="month" name="reviewDate" id="reviewDate" value="2021-01" required>
-    </div>
+  <div class="col-md-4">
+    <label for="jobKnowledge" class="form-label"
+      >Job Knowledge</label
+    >
+    <input
+      class="form-control"
+      name="jobKnowledge"
+      id="jobKnowledge"
+      type="number"
+      value="2"
+      min="1"
+      max="5"
+      step="1"
+    />
+    <small class="text-muted">Knows their job and fulfills their JD to the fullest potential.</small>
+  </div>
 
-    <div class="col-md-4">
-        <label for="businessObjectives" class="form-label">Business Objectives</label>
-        <input class="form-control" name="businessObjectives" id="businessObjectives" type="number" value="25" min="0"
-            max="50" step="5" />
-        <small class="text-muted">Out of 50%</small>
-    </div>
+  <div class="col-md-4">
+    <label for="qualityOfWork" class="form-label"
+      >Quality of Work</label
+    >
+    <input
+      class="form-control"
+      name="qualityOfWork"
+      id="qualityOfWork"
+      type="number"
+      value="2"
+      min="1"
+      max="5"
+      step="1"
+    />
+    <small class="text-muted">Is thorough, accurate, and neat in work.</small>
+  </div>
 
-    <div class="col-md-4">
-        <label for="distributionCoverage" class="form-label">Distribution and Coverage</label>
-        <input class="form-control" name="distributionCoverage" id="distributionCoverage" type="number" value="10"
-            min="0" max="20" step="5" />
-        <small class="text-muted">Out of 20%</small>
-    </div>
+  <div class="col-md-4">
+    <label for="accountability" class="form-label">Accountability</label>
+    <input
+      class="form-control"
+      name="accountability"
+      id="accountability"
+      type="number"
+      value="2"
+      min="1"
+      max="5"
+      step="1"
+    />
+    <small class="text-muted">Accepts responsibility for actions, answerable to consequences.</small>
+  </div>
 
-    <div class="col-md-4">
-        <label for="peopleManagement" class="form-label">People Management</label>
-        <input class="form-control" name="peopleManagement" id="peopleManagement" type="number" value="5" min="0"
-            max="10" step="5" />
-        <small class="text-muted">Out of 10%</small>
-    </div>
+  <div class="col-md-4">
+    <label for="attitudeRespectfulness" class="form-label"
+      >Attitude/Respectfulness</label
+    >
+    <input
+      class="form-control"
+      name="attitudeRespectfulness"
+      id="attitudeRespectfulness"
+      type="number"
+      value="2"
+      min="1"
+      max="5"
+      step="1"
+    />
+    <small class="text-muted">Shows initiative, optimism, and politeness.</small>
+  </div>
 
-    <div class="col-md-4">
-        <label for="customerDistributorManagement" class="form-label">Customer/Distributor Management</label>
-        <input class="form-control" name="customerDistributorManagement" id="customerDistributorManagement"
-            type="number" value="5" min="0" max="10" step="5" />
-        <small class="text-muted">Out of 10%</small>
-    </div>
+  <div class="col-md-4">
+    <label for="punctualityAttendance" class="form-label"
+      >Punctuality & Attendance</label
+    >
+    <input
+      class="form-control"
+      name="punctualityAttendance"
+      id="punctualityAttendance"
+      type="number"
+      value="2"
+      min="1"
+      max="5"
+      step="1"
+    />
+    <small class="text-muted">Is rarely absent, arrives punctually, works required hours.</small>
+  </div>
 
-    <div class="col-md-4">
-        <label for="financialResourcesManagement" class="form-label">Financial and Resources Management</label>
-        <input class="form-control" name="financialResourcesManagement" id="financialResourcesManagement" type="number"
-            value="5" min="0" max="10" step="5" />
-        <small class="text-muted">Out of 10%</small>
-    </div>
 
-    <div class="form-group">
-        <label for="comment" class="form-label">Comment</label>
-        <textarea class="form-control" name="comment" id="comment" rows="3" placeholder="Short and Precise"></textarea>
-      </div>
+  <div class="col-md-4">
+    <label for="policyProcedure" class="form-label"
+      >Policy & Procedure</label
+    >
+    <input
+      class="form-control"
+      name="policyProcedure"
+      id="policyProcedure"
+      type="number"
+      value="2"
+      min="1"
+      max="5"
+      step="1"
+    />
+    <small class="text-muted">Follows the organization's policies and procedures.</small>
+  </div>
 
-    <hr class="my-4">
-    <div class="d-grid gap-2 col-6 mx-auto">
-        <button class="btn btn-primary btn-lg" type="submit">Add Assessment</button>
-    </div>
+  <div class="col-md-4">
+    <label for="compellationOfAssignment" class="form-label"
+      >Compellation of Assignment</label
+    >
+    <input
+      class="form-control"
+      name="compellationOfAssignment"
+      id="compellationOfAssignment"
+      type="number"
+      value="2"
+      min="1"
+      max="5"
+      step="1"
+    />
+    <small class="text-muted">Successfully completes tasks and meets all deadlines.</small>
+  </div>
+
+  <div class="col-md-4">
+    <label for="confidentiality" class="form-label"
+      >Confidentiality</label
+    >
+    <input
+      class="form-control"
+      name="confidentiality"
+      id="confidentiality"
+      type="number"
+      value="2"
+      min="1"
+      max="5"
+      step="1"
+    />
+    <small class="text-muted">Does not discuss internal events with coworkers.</small>
+  </div>
+
+  <div class="col-md-4">
+    <label for="acceptsCriticism" class="form-label"
+      >Accepts criticism</label
+    >
+    <input
+      class="form-control"
+      name="acceptsCriticism"
+      id="acceptsCriticism"
+      type="number"
+      value="2"
+      min="1"
+      max="5"
+      step="1"
+    />
+    <small class="text-muted">Has the ability to learn from suggestions and change behavior.</small>
+  </div>
+
+  <div class="col-md-4">
+    <label for="appearanceOfWorkArea" class="form-label"
+      >Appearance of Work Area</label
+    >
+    <input
+      class="form-control"
+      name="appearanceOfWorkArea"
+      id="appearanceOfWorkArea"
+      type="number"
+      value="2"
+      min="1"
+      max="5"
+      step="1"
+    />
+    <small class="text-muted">Keeps work area neat and orderly.</small>
+  </div>
+
+  <div class="form-group">
+    <label for="comment" class="form-label">Comment</label>
+    <textarea
+      class="form-control"
+      name="comment"
+      id="comment"
+      rows="3"
+      placeholder="Short and Precise"
+    ></textarea>
+  </div>
+
+  <hr class="my-4" />
+  <div class="d-grid gap-2 col-6 mx-auto">
+    <button class="btn btn-primary btn-lg" type="submit">Add Assessment</button>
+  </div>
 </form>
 {% endblock %}

@@ -132,40 +132,63 @@ def view_smart_goals():
     except Exception as e:
         return f'An Error Occured: {e}'
 
+@app.route('/delete-smart-goal/<string:departmentOf>')
+def delete_smart_goals(departmentOf):
+    try:
+        db.collection('SMART_GOALS').document(departmentOf).delete()
+        return redirect('/view-smart-goals')
+    except Exception as e:
+        return f'An Error Occured: {e}'
+
 @app.route('/add-talent-assessment', methods=['POST', 'GET'])
 def add_talent_assessment():
     if request.method == 'POST':
         UUID = request.form['UUID']
         reviewDate = request.form['reviewDate']
-        businessObjectives = request.form['businessObjectives']
-        distributionCoverage = request.form['distributionCoverage']
-        peopleManagement = request.form['peopleManagement']
-        customerDistributorManagement = request.form['customerDistributorManagement']
-        financialResourcesManagement = request.form['financialResourcesManagement']
+        jobKnowledge = request.form['jobKnowledge']
+        qualityOfWork = request.form['qualityOfWork']
+        accountability = request.form['accountability']
+        attitudeRespectfulness = request.form['attitudeRespectfulness']
+        punctualityAttendance = request.form['punctualityAttendance']
+        policyProcedure = request.form['policyProcedure']
+        compellationOfAssignment = request.form['compellationOfAssignment']
+        confidentiality = request.form['confidentiality']
+        acceptsCriticism = request.form['acceptsCriticism']
+        appearanceOfWorkArea = request.form['appearanceOfWorkArea']
         comment = request.form['comment']
-        total = int(businessObjectives) + int(distributionCoverage) + int(peopleManagement) + int(customerDistributorManagement) + int(financialResourcesManagement)
+        total = int(jobKnowledge) + int(qualityOfWork) + int(accountability) + int(attitudeRespectfulness) + int(punctualityAttendance) + int(policyProcedure) + int(compellationOfAssignment) + int(confidentiality) + int(acceptsCriticism) + int(appearanceOfWorkArea)
+        total = float(total/10)
         def calPerformerStatus(total):
-            if 0 > total or total < 49:
-                status = 'Under Performer'
-            elif 50 > total or total < 69:
-                status = 'Needs Development'
-            elif 70 > total or total < 79:
-                status = 'Full Performer'
-            elif 80 > total or total < 89:
-                status = 'Strong Performer'
-            elif 90 > total or total < 100:
-                status = 'Exceptional Performer'
-            return status
+            if 1.00 >= total or total <= 1.44:
+                status = 'Very Least'
+                return status
+            elif 1.45 >= total or total <= 2.44:
+                status = 'Least'
+                return status
+            elif 2.45 >= total or total <= 3.44:
+                status = 'Good'
+                return status
+            elif 3.45 >= total or total <= 4.44:
+                status = 'Very Good'
+                return status
+            elif 4.45 >= total or total <= 5.00:
+                status = 'Excellent'
+                return status
         performerStatus = calPerformerStatus(total)
         try:
             db.collection(u'ASSESSMENT').document(UUID).set({
             u'UUID': UUID,
             u'reviewDate': reviewDate,
-            u'businessObjectives': businessObjectives,
-            u'distributionCoverage': distributionCoverage,
-            u'peopleManagement': peopleManagement,
-            u'customerDistributorManagement': customerDistributorManagement,
-            u'financialResourcesManagement': financialResourcesManagement,
+            u'jobKnowledge': jobKnowledge,
+            u'qualityOfWork': qualityOfWork,
+            u'accountability': accountability,
+            u'attitudeRespectfulness': attitudeRespectfulness,
+            u'punctualityAttendance': punctualityAttendance,
+            u'policyProcedure': policyProcedure,
+            u'compellationOfAssignment': compellationOfAssignment,
+            u'confidentiality': confidentiality,
+            u'acceptsCriticism': acceptsCriticism,
+            u'appearanceOfWorkArea': appearanceOfWorkArea,
             u'comment': comment,
             u'totalScore': total,
             u'scores': performerStatus})
@@ -182,11 +205,19 @@ def view_talent_assessments():
     except Exception as e:
         return f'An Error Occured: {e}'
 
+@app.route('/delete-talent-assessments/<string:UUID>')
+def delete_talent_assessments(UUID):
+    try:
+        db.collection('ASSESSMENT').document(UUID).delete()
+        return redirect('/view-talent-assessments')
+    except Exception as e:
+        return f'An Error Occured: {e}'
+
 @app.route('/view-employee-of-the-year', methods=['POST', 'GET'])
 def view_employee_of_the_year():
 	try:
 	    employees = db.collection('ASSESSMENT')
-	    employees = employees.where(u'scores', u'==', 100).stream()
+	    employees = employees.where(u'totalScore', u'>', 4.85).stream()
 	    return render_template('view-employee-of-the-year.html', employees=employees)
 	except Exception as e:
 	    return f'An Error Occured: {e}'

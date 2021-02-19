@@ -221,3 +221,19 @@ Chef Executive Officer
 | Least      | 1.45    | 2.44    |
 | Very Least | 1.00    | 1.44    |
 
+### Evaluation Criteria
+
+```
+| Criteria                   | Description                                                     |
+|----------------------------|-----------------------------------------------------------------|
+| Job Knowledge              | Knows their job and fulfills their JD to the fullest potential. |
+| Quality of Work            | Is thorough, accurate, and neat in work.                        |
+| Accountability             | Accepts responsibility for actions, answerable to consequences. |
+| Attitude/Respectfulness    | Shows initiative, optimism, and politeness.                     |
+| Punctuality & Attendance   | Is rarely absent, arrives punctually, works required hours.     |
+| Policy & Procedure         | Follows the organization's policies and procedures.             |
+| Compellation of Assignment | Successfully completes tasks and meets all deadlines.           |
+| Confidentiality            | Does not discuss internal events with coworkers.                |
+| Accepts criticism          | Has the ability to learn from suggestions and change behavior.  |
+| Appearance of Work Area    | Keeps work area neat and orderly.                               |
+```
