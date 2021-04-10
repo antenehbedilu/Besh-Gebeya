@@ -10,85 +10,84 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">Besh Gebeya</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
+                <!-- <ul class="navbar-nav text-center"> -->
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/view-demographics">Demographics</a>
+                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/add-demographic">Add Demographics</a>
+                        <a class="nav-link" href="/docs">Docs</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/evaluation-criteria">Evaluation Criteria</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            FAQ
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="/rating-scale">Rating Scale</a></li>
+                            <li><a class="dropdown-item" href="/evaluation-criteria">Evaluation Criterian</a></li>
+                            <li><a class="dropdown-item" href="/guiding-assessment">Guiding Assessment</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/rating-scale">Rating Scale</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/view-smart-goals">Smart Goals</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/add-smart-goal">Add SmartGoals</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/view-talent-assessments">Talent Assessment</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/add-talent-assessment">Add Talent Assessment</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/view-employee-of-the-year">Best Performer</a>
-                    </li>
-                    <!--  <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="/demographics" id="navbarDropdown" role="button"
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Demographics
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/adddemographics">Add Demographics</a></li>
-                        </ul>
-                    </li>
-                  <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="/ratingscale" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Rating Scale
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/addratingscale">Add Rating Scale</a></li>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="/view-demographics">View Demographics</a></li>
+                            <li><a class="dropdown-item" href="/add-demographic">Add Demographic</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="/smartgoals" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Talent Assessment
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="/view-talent-assessments">View Talent Assessments</a></li>
+                            <li><a class="dropdown-item" href="/add-talent-assessment">Add Talent Assessment</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Smart Goals
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/addsmartgoals">Add SmartGoals</a></li>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="/view-smart-goals">View Smart Goals</a></li>
+                            <li><a class="dropdown-item" href="/add-smart-goal">Add Smart Goals</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="/assessment" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Assessment
+                            Best Performer
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/addassessment">Add Assessment</a></li>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="/view-employee-of-the-month">Employee of the month</a></li>
+                            <li><a class="dropdown-item" href="/view-employee-of-the-year">Employee of the year</a></li>
                         </ul>
-                    </li> -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/charts">Charts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/api">API</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
-
     <div class="container">
         <div class="row">
             <div class="col">

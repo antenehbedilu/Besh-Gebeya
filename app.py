@@ -102,6 +102,10 @@ def evaluation_criteria():
 def rating_scale():
     return render_template('rating-scale.html')
 
+@app.route('/guiding-assessment')
+def guiding_assessment():
+    return render_template('guiding-assessment.html')
+
 @app.route('/add-smart-goal', methods=['POST', 'GET'])
 def add_smart_goal():
     if request.method == 'POST':
