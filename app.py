@@ -226,10 +226,18 @@ def view_employee_of_the_year():
 	except Exception as e:
 	    return f'An Error Occured: {e}'
 
+@app.route('/view-employee-of-the-month', methods=['POST', 'GET'])
+def view_employee_of_the_month():
+	try:
+	    employees = db.collection('ASSESSMENT')
+	    employees = employees.where(u'totalScore', u'>', 4.85).stream()
+	    return render_template('view-employee-of-the-month.html', employees=employees)
+	except Exception as e:
+	    return f'An Error Occured: {e}'
 
-
-
-
+@app.route('/docs', methods=['POST', 'GET'])
+def docs():
+    return render_template('docs.html')
 
 
 if __name__ == '__main__':

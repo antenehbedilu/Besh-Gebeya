@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block head %}
-<title>Best Performer</title>
+<title>Employee of the year</title>
 {% endblock %} {% block body %}
-<h1>Best Performer</h1>
+<h1>Employee of the year</h1>
 <br />
 
 {% for employee in employees %} {% set employee = employee.to_dict() %}
@@ -11,8 +11,8 @@
       Best Performer of {{ employee['reviewDate'][0:4] }}
     </div>
     <div class="card-body">
-      <h5 class="card-title">Employee UUID {{ employee['UUID'] }}</h5>
-      <p class="card-text">Review Year {{ employee['reviewDate'] }}</p>
+      <h5 class="card-title">Employee ID {{ employee['UUID'] }}</h5>
+      <p class="card-text">Review Year {{ employee['reviewDate'][0:4] }}</p>
     </div>
   </div>
 </div>
