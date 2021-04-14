@@ -15,6 +15,7 @@ def index():
 @app.route('/add-demographic', methods=['POST', 'GET'])
 def add_demographic():
     if request.method == 'POST':
+        UUID = request.form['UUID']
         fullName = request.form['fullName']
         gender = request.form['gender']
         dateOfBirth = request.form['dateOfBirth']
@@ -24,10 +25,10 @@ def add_demographic():
         department = request.form['department']
         position = request.form['position']
         grade = request.form['grade']
-        lineManager = request.form['lineManager']    
-        import uuid
+        lineManager = request.form['lineManager']
+        """         import uuid
         UUID = uuid.uuid4()
-        UUID = str(UUID) 
+        UUID = str(UUID)  """    
         try:
             db.collection(u'DEMOGRAPHICS').document(UUID).set({
             u'UUID': UUID,
