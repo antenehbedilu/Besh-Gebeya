@@ -1,6 +1,5 @@
-from flask import Flask, render_template, request, redirect, url_for, Blueprint, flash
+from flask import Flask, render_template, request, redirect, url_for, flash
 from firebase_admin import credentials, firestore, initialize_app
-from flask_restplus import Api, Resource, fields
 from datetime import datetime
 
 cred = credentials.Certificate('ipm-system-db.json')
@@ -8,36 +7,6 @@ default_app = initialize_app(cred)
 db = firestore.client()
 
 app = Flask(__name__)
-blueprint = Blueprint('api', __name__, url_prefix='/api')
-api = Api(blueprint, doc='/docs', version='1.0', title='Besh Gebeya', description='Besh Gebeya Performance Management API',)
-app.register_blueprint(blueprint)
-
-@api.route('/assessment-month')
-class AssessmentsMonth(Resource):
-    def get(self):
-        '''List all monthly assessment'''
-        assessments = db.collection('ASSESSMENT-MONTH').stream()
-        for assessment in assessments:
-            print(assessment.to_dict())
-            return assessment.to_dict()
-
-@api.route('/assessment-year')
-class AssessmentsYear(Resource):
-    def get(self):
-        '''List all yearly assessment'''
-        assessments = db.collection('ASSESSMENT-YEAR').stream()
-        for assessment in assessments:
-            print(assessment.to_dict())
-            return assessment.to_dict()
-
-@api.route('/smart-goals')
-class SmartGoals(Resource):
-    def get(self):
-        '''List all smart goals'''
-        assessments = db.collection('SMART_GOALS').stream()
-        for assessment in assessments:
-            print(assessment.to_dict())
-            return assessment.to_dict()
 
 @app.route('/')
 def index():
