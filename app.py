@@ -145,8 +145,8 @@ def delete_smart_goals(departmentOf):
     except Exception as e:
         return f'An Error Occured: {e}'
 
-@app.route('/add-talent-assessment', methods=['POST', 'GET'])
-def add_talent_assessment():
+@app.route('/add-talent-assessment-month', methods=['POST', 'GET'])
+def add_talent_assessment_month():
     if request.method == 'POST':
         UUID = request.form['UUID']
         reviewDate = request.form['reviewDate']
@@ -181,7 +181,7 @@ def add_talent_assessment():
                 return status
         performerStatus = calPerformerStatus(total)
         try:
-            db.collection(u'ASSESSMENT').document(UUID).set({
+            db.collection(u'ASSESSMENT-MONTH').document(UUID).set({
             u'UUID': UUID,
             u'reviewDate': reviewDate,
             u'jobKnowledge': jobKnowledge,
@@ -197,31 +197,104 @@ def add_talent_assessment():
             u'comment': comment,
             u'totalScore': total,
             u'scores': performerStatus})
-            return redirect('/view-talent-assessments')
+            return redirect('/view-talent-assessments-month')
         except Exception as e:
             return f'An Error Occured: {e}'
-    return render_template('add-talent-assessment.html')
+    return render_template('add-talent-assessment-month.html')
 
-@app.route('/view-talent-assessments', methods=['POST', 'GET'])
-def view_talent_assessments():
+@app.route('/add-talent-assessment-year', methods=['POST', 'GET'])
+def add_talent_assessment_year():
+    if request.method == 'POST':
+        UUID = request.form['UUID']
+        reviewDate = request.form['reviewDate'][0:4]
+        jobKnowledge = request.form['jobKnowledge']
+        qualityOfWork = request.form['qualityOfWork']
+        accountability = request.form['accountability']
+        attitudeRespectfulness = request.form['attitudeRespectfulness']
+        punctualityAttendance = request.form['punctualityAttendance']
+        policyProcedure = request.form['policyProcedure']
+        compellationOfAssignment = request.form['compellationOfAssignment']
+        confidentiality = request.form['confidentiality']
+        acceptsCriticism = request.form['acceptsCriticism']
+        appearanceOfWorkArea = request.form['appearanceOfWorkArea']
+        comment = request.form['comment']
+        total = int(jobKnowledge) + int(qualityOfWork) + int(accountability) + int(attitudeRespectfulness) + int(punctualityAttendance) + int(policyProcedure) + int(compellationOfAssignment) + int(confidentiality) + int(acceptsCriticism) + int(appearanceOfWorkArea)
+        total = float(total/10)
+        def calPerformerStatus(total):
+            if 1.00 >= total or total <= 1.44:
+                status = 'Very Least'
+                return status
+            elif 1.45 >= total or total <= 2.44:
+                status = 'Least'
+                return status
+            elif 2.45 >= total or total <= 3.44:
+                status = 'Good'
+                return status
+            elif 3.45 >= total or total <= 4.44:
+                status = 'Very Good'
+                return status
+            elif 4.45 >= total or total <= 5.00:
+                status = 'Excellent'
+                return status
+        performerStatus = calPerformerStatus(total)
+        try:
+            db.collection(u'ASSESSMENT-YEAR').document(UUID).set({
+            u'UUID': UUID,
+            u'reviewDate': reviewDate,
+            u'jobKnowledge': jobKnowledge,
+            u'qualityOfWork': qualityOfWork,
+            u'accountability': accountability,
+            u'attitudeRespectfulness': attitudeRespectfulness,
+            u'punctualityAttendance': punctualityAttendance,
+            u'policyProcedure': policyProcedure,
+            u'compellationOfAssignment': compellationOfAssignment,
+            u'confidentiality': confidentiality,
+            u'acceptsCriticism': acceptsCriticism,
+            u'appearanceOfWorkArea': appearanceOfWorkArea,
+            u'comment': comment,
+            u'totalScore': total,
+            u'scores': performerStatus})
+            return redirect('/view-talent-assessments-year')
+        except Exception as e:
+            return f'An Error Occured: {e}'
+    return render_template('add-talent-assessment-year.html')
+
+@app.route('/view-talent-assessments-month', methods=['POST', 'GET'])
+def view_talent_assessments_month():
     try:
-        assessments = db.collection('ASSESSMENT').get()
-        return render_template('view-talent-assessments.html', assessments=assessments)
+        assessments = db.collection('ASSESSMENT-MONTH').get()
+        return render_template('view-talent-assessments-month.html', assessments=assessments)
+    except Exception as e:
+        return f'An Error Occured: {e}'
+    
+@app.route('/view-talent-assessments-year', methods=['POST', 'GET'])
+def view_talent_assessments_year():
+    try:
+        assessments = db.collection('ASSESSMENT-YEAR').get()
+        return render_template('view-talent-assessments-year.html', assessments=assessments)
     except Exception as e:
         return f'An Error Occured: {e}'
 
-@app.route('/delete-talent-assessments/<string:UUID>')
-def delete_talent_assessments(UUID):
+@app.route('/delete-talent-assessments-month/<string:UUID>')
+def delete_talent_assessments_month(UUID):
     try:
-        db.collection('ASSESSMENT').document(UUID).delete()
-        return redirect('/view-talent-assessments')
+        db.collection('ASSESSMENT-MONTH').document(UUID).delete()
+        return redirect('/view-talent-assessments-month')
+    except Exception as e:
+        return f'An Error Occured: {e}'
+
+@app.route('/delete-talent-assessments-year/<string:UUID>')
+def delete_talent_assessments_year(UUID):
+    try:
+        db.collection('ASSESSMENT-YEAR').document(UUID).delete()
+        return redirect('/view-talent-assessments-year')
     except Exception as e:
         return f'An Error Occured: {e}'
 
 @app.route('/view-employee-of-the-year', methods=['POST', 'GET'])
 def view_employee_of_the_year():
 	try:
-	    employees = db.collection('ASSESSMENT')
+	    employees = db.collection('ASSESSMENT-YEAR')
 	    employees = employees.where(u'totalScore', u'>', 4.85).stream()
 	    return render_template('view-employee-of-the-year.html', employees=employees)
 	except Exception as e:
@@ -230,7 +303,7 @@ def view_employee_of_the_year():
 @app.route('/view-employee-of-the-month', methods=['POST', 'GET'])
 def view_employee_of_the_month():
 	try:
-	    employees = db.collection('ASSESSMENT')
+	    employees = db.collection('ASSESSMENT-MONTH')
 	    employees = employees.where(u'totalScore', u'>', 4.85).stream()
 	    return render_template('view-employee-of-the-month.html', employees=employees)
 	except Exception as e:
@@ -239,7 +312,6 @@ def view_employee_of_the_month():
 @app.route('/docs', methods=['POST', 'GET'])
 def docs():
     return render_template('docs.html')
-
 
 if __name__ == '__main__':
     app.run(debug=True)

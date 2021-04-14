@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Assessment</title>
+{% endblock %}
+
+{% block body %}
+<h1>View Assessment of the month</h1>
+<br>
+
+<div class="container mb-3 mt-3">
+    <table class="table ">
+        <thead>
+            <tr>
+                <th class="th-sm">#
+                </th>
+                <th class="th-sm">ID
+                </th>
+                <th class="th-sm">Review Month
+                </th>
+<!--                 <th class="th-sm">Job Knowledge
+                </th>
+                <th class="th-sm">Quality of Work
+                </th>
+                <th class="th-sm">Accountability
+                </th>
+                <th class="th-sm">Attitude/Respectfulness
+                </th>
+                <th class="th-sm">Punctuality & Attendance
+                </th>
+                <th class="th-sm">Policy & Procedure
+                </th>
+                <th class="th-sm">Compellation of Assignment
+                </th>
+                <th class="th-sm">Confidentiality
+                </th>
+                <th class="th-sm">Accepts criticism
+                </th>
+                <th class="th-sm">Appearance of Work Area
+                </th>
+                <th class="th-sm">Comment
+                </th> -->
+                <th class="th-sm">Total Score
+                </th>
+                <th class="th-sm">Status
+                </th>
+                <th class="th-sm">Action
+                </th>
+            </tr>
+        </thead>
+        {% for assessment in assessments %}
+        {% set assessment = assessment.to_dict() %}
+        <tbody>
+            <tr>
+                <th>{{ loop.index }}</th>
+                <td>{{ assessment['UUID'] }}</td>
+                <td>{{ assessment['reviewDate'] }}</td>
+               <!--  <td>{{ assessment['jobKnowledge'] }}</td>
+                <td>{{ assessment['qualityOfWork'] }}</td>
+                <td>{{ assessment['accountability'] }}</td>
+                <td>{{ assessment['attitudeRespectfulness'] }}</td>
+                <td>{{ assessment['punctualityAttendance'] }}</td>
+                <td>{{ assessment['policyProcedure'] }}</td>
+                <td>{{ assessment['compellationOfAssignment'] }}</td>
+                <td>{{ assessment['confidentiality'] }}</td>
+                <td>{{ assessment['acceptsCriticism'] }}</td>
+                <td>{{ assessment['appearanceOfWorkArea'] }}</td>
+                <td>{{ assessment['comment'] }}</td> -->
+                <td>{{ assessment['totalScore'] }}</td>
+                <td>{{ assessment['scores'] }}</td>
+                <td>
+                        <a class="btn btn-outline-danger my-2 my-sm-0"
+                        href='/delete-talent-assessments-year/{{ assessment["UUID"] }}'>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                            <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                            </svg>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+        {% endfor %}
+        <tfoot>
+            <tr>
+                <th class="th-sm">#
+                </th>
+                <th class="th-sm">ID
+                </th>
+                <th class="th-sm">Review Month
+                </th>
+               <!--  <th class="th-sm">Job Knowledge
+                </th>
+                <th class="th-sm">Quality of Work
+                </th>
+                <th class="th-sm">Accountability
+                </th>
+                <th class="th-sm">Attitude/Respectfulness
+                </th>
+                <th class="th-sm">Punctuality & Attendance
+                </th>
+                <th class="th-sm">Policy & Procedure
+                </th>
+                <th class="th-sm">Compellation of Assignment
+                </th>
+                <th class="th-sm">Confidentiality
+                </th>
+                <th class="th-sm">Accepts criticism
+                </th>
+                <th class="th-sm">Appearance of Work Area
+                </th>
+                <th class="th-sm">Comment
+                </th> -->
+                <th class="th-sm">Total Score
+                </th>
+                <th class="th-sm">Status
+                </th>
+                <th class="th-sm">Action
+                </th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+{% endblock %}

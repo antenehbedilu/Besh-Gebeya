@@ -1,13 +1,13 @@
 {% extends 'base.html' %} {% block head %}
 <title>Assessment</title>
 {% endblock %} {% block body %}
-<h1>Add Assessment</h1>
+<h1>Add Assessment of the year</h1>
 <br />
 
-<form action="/add-talent-assessment" method="POST" class="row g-3">
+<form action="/add-talent-assessment-year" method="POST" class="row g-3">
   <div class="col-md-4">
     <label for="reviewDate" class="form-label">ID</label>
-    <input class="form-control" type="text" name="UUID" id="UUID" required />
+    <input class="form-control" type="text" name="UUID" id="UUID" placeholder="01" required />
   </div>
 
   <div class="col-md-4">
