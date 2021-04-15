@@ -261,19 +261,37 @@ def add_talent_assessment_year():
 
 @app.route('/view-talent-assessments-month', methods=['POST', 'GET'])
 def view_talent_assessments_month():
-    try:
-        assessments = db.collection('ASSESSMENT-MONTH').get()
-        return render_template('view-talent-assessments-month.html', assessments=assessments)
-    except Exception as e:
-        return f'An Error Occured: {e}'
+    if request.method == 'POST':
+        try:
+            query = request.form['query']
+            assessments = db.collection('ASSESSMENT-MONTH')
+            assessments = assessments.where(u'UUID', u'==', query).stream()
+            return render_template('view-talent-assessments-month.html', assessments=assessments)
+        except Exception as e:
+            return f'An Error Occured: {e}'
+    else:
+        try:
+            assessments = db.collection('ASSESSMENT-MONTH').order_by(u'UUID').get()
+            return render_template('view-talent-assessments-month.html', assessments=assessments)
+        except Exception as e:
+            return f'An Error Occured: {e}'
     
 @app.route('/view-talent-assessments-year', methods=['POST', 'GET'])
 def view_talent_assessments_year():
-    try:
-        assessments = db.collection('ASSESSMENT-YEAR').get()
-        return render_template('view-talent-assessments-year.html', assessments=assessments)
-    except Exception as e:
-        return f'An Error Occured: {e}'
+    if request.method == 'POST':
+        try:
+            query = request.form['query']
+            assessments = db.collection('ASSESSMENT-YEAR')
+            assessments = assessments.where(u'UUID', u'==', query).stream()
+            return render_template('view-talent-assessments-year.html', assessments=assessments)
+        except Exception as e:
+            return f'An Error Occured: {e}'
+    else:
+        try:
+            assessments = db.collection('ASSESSMENT-YEAR').order_by(u'UUID').get()
+            return render_template('view-talent-assessments-year.html', assessments=assessments)
+        except Exception as e:
+            return f'An Error Occured: {e}'
 
 @app.route('/delete-talent-assessments-month/<string:UUID>')
 def delete_talent_assessments_month(UUID):
