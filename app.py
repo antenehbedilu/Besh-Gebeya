@@ -1,6 +1,7 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, send_file
 from firebase_admin import credentials, firestore, initialize_app
-from datetime import datetime
+import pandas as pd
+import datetime
 
 cred = credentials.Certificate('ipm-system-db.json')
 default_app = initialize_app(cred) 
@@ -275,6 +276,25 @@ def view_talent_assessments_month():
             return render_template('view-talent-assessments-month.html', assessments=assessments)
         except Exception as e:
             return f'An Error Occured: {e}'
+
+@app.route('/download-monthly-assessment')
+def download_monthly_assessment():
+    monthly_talent_assessment = db.collection('ASSESSMENT-MONTH')
+
+    docs = monthly_talent_assessment.get()
+    data = []
+
+    for doc in docs:
+        data.append(doc.to_dict())
+        df = pd.DataFrame(data)
+    
+    path = datetime.datetime.now()
+    path = path.strftime('%B_'+'%Y')
+    path = f'Monthly_Talent_Assessment_of_{path}'
+
+    df.to_csv(f'{path}.csv', index=False)
+    file = f'{path}.csv'
+    return send_file(file,as_attachment=True)
     
 @app.route('/view-talent-assessments-year', methods=['POST', 'GET'])
 def view_talent_assessments_year():
@@ -292,6 +312,25 @@ def view_talent_assessments_year():
             return render_template('view-talent-assessments-year.html', assessments=assessments)
         except Exception as e:
             return f'An Error Occured: {e}'
+
+@app.route('/download-yearly-assessment')
+def download_yearly_assessment():
+    yearly_talent_assessment = db.collection('ASSESSMENT-YEAR')
+
+    docs = yearly_talent_assessment.get()
+    data = []
+
+    for doc in docs:
+        data.append(doc.to_dict())
+        df = pd.DataFrame(data)
+    
+    path = datetime.datetime.now()
+    path = path.strftime('%B_'+'%Y')
+    path = f'Yearly_Talent_Assessment_of_{path}'
+
+    df.to_csv(f'{path}.csv', index=False)
+    file = f'{path}.csv'
+    return send_file(file,as_attachment=True)
 
 @app.route('/delete-talent-assessments-month/<string:UUID>')
 def delete_talent_assessments_month(UUID):
