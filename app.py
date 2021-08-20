@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, send_file
 from firebase_admin import credentials, firestore, initialize_app
-import pandas as pd
+from flask_httpauth import HTTPBasicAuth
+from werkzeug.security import generate_password_hash, check_password_hash
+#import pandas as pd
 import datetime
 
 cred = credentials.Certificate('ipm-system-db.json')
@@ -8,12 +10,25 @@ default_app = initialize_app(cred)
 db = firestore.client()
 
 app = Flask(__name__)
+auth = HTTPBasicAuth()
+
+users = {
+    "anteneh": generate_password_hash("passwd"),
+    "admin": generate_password_hash("passwd")
+}
+
+@auth.verify_password
+def verify_password(username, password):
+    if username in users and \
+            check_password_hash(users.get(username), password):
+        return username
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
 @app.route('/add-demographic', methods=['POST', 'GET'])
+@auth.login_required
 def add_demographic():
     if request.method == 'POST':
         UUID = request.form['UUID']
@@ -49,6 +64,7 @@ def add_demographic():
     return render_template('add-demographic.html')
 
 @app.route('/view-demographics', methods=['POST', 'GET'])
+@auth.login_required
 def view_demographics():
     if request.method == 'POST':
         try:
@@ -66,6 +82,7 @@ def view_demographics():
             return f'An Error Occured: {e}'
 
 @app.route('/update-demographic/<string:UUID>', methods=['POST', 'GET'])
+@auth.login_required
 def update_demographic(UUID):
     employees = db.collection('DEMOGRAPHICS')
     employees = employees.where(u'UUID', u'==', UUID).stream()
@@ -89,6 +106,7 @@ def update_demographic(UUID):
         return render_template('update-demographic.html', employees=employees)
 
 @app.route('/delete-demographic/<string:UUID>')
+@auth.login_required
 def delete_demographic(UUID):
     try:
         db.collection('DEMOGRAPHICS').document(UUID).delete()
@@ -109,6 +127,7 @@ def guiding_assessment():
     return render_template('guiding-assessment.html')
 
 @app.route('/add-smart-goal', methods=['POST', 'GET'])
+@auth.login_required
 def add_smart_goal():
     if request.method == 'POST':
         departmentOf = request.form['departmentOf']
@@ -131,6 +150,7 @@ def add_smart_goal():
     return render_template('add-smart-goal.html')
 
 @app.route('/view-smart-goals', methods=['POST', 'GET'])
+@auth.login_required
 def view_smart_goals():
     try:
         departments = db.collection('SMART_GOALS').get()
@@ -139,6 +159,7 @@ def view_smart_goals():
         return f'An Error Occured: {e}'
 
 @app.route('/delete-smart-goal/<string:departmentOf>')
+@auth.login_required
 def delete_smart_goals(departmentOf):
     try:
         db.collection('SMART_GOALS').document(departmentOf).delete()
@@ -147,6 +168,7 @@ def delete_smart_goals(departmentOf):
         return f'An Error Occured: {e}'
 
 @app.route('/add-talent-assessment-month', methods=['POST', 'GET'])
+@auth.login_required
 def add_talent_assessment_month():
     if request.method == 'POST':
         UUID = request.form['UUID']
@@ -204,6 +226,7 @@ def add_talent_assessment_month():
     return render_template('add-talent-assessment-month.html')
 
 @app.route('/add-talent-assessment-year', methods=['POST', 'GET'])
+@auth.login_required
 def add_talent_assessment_year():
     if request.method == 'POST':
         UUID = request.form['UUID']
@@ -278,6 +301,7 @@ def view_talent_assessments_month():
             return f'An Error Occured: {e}'
 
 @app.route('/download-monthly-assessment')
+@auth.login_required
 def download_monthly_assessment():
     monthly_talent_assessment = db.collection('ASSESSMENT-MONTH')
 
@@ -297,6 +321,7 @@ def download_monthly_assessment():
     return send_file(file,as_attachment=True)
     
 @app.route('/view-talent-assessments-year', methods=['POST', 'GET'])
+@auth.login_required
 def view_talent_assessments_year():
     if request.method == 'POST':
         try:
@@ -314,6 +339,7 @@ def view_talent_assessments_year():
             return f'An Error Occured: {e}'
 
 @app.route('/download-yearly-assessment')
+@auth.login_required
 def download_yearly_assessment():
     yearly_talent_assessment = db.collection('ASSESSMENT-YEAR')
 
@@ -333,6 +359,7 @@ def download_yearly_assessment():
     return send_file(file,as_attachment=True)
 
 @app.route('/delete-talent-assessments-month/<string:UUID>')
+@auth.login_required
 def delete_talent_assessments_month(UUID):
     try:
         db.collection('ASSESSMENT-MONTH').document(UUID).delete()
@@ -341,6 +368,7 @@ def delete_talent_assessments_month(UUID):
         return f'An Error Occured: {e}'
 
 @app.route('/delete-talent-assessments-year/<string:UUID>')
+@auth.login_required
 def delete_talent_assessments_year(UUID):
     try:
         db.collection('ASSESSMENT-YEAR').document(UUID).delete()
@@ -367,6 +395,7 @@ def view_employee_of_the_month():
 	    return f'An Error Occured: {e}'
 
 @app.route('/docs', methods=['POST', 'GET'])
+@auth.login_required
 def docs():
     return render_template('docs.html')
 
